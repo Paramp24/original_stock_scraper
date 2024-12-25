@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSK STOCK SCREENER</title>
+    <link rel="icon" type="image/x-icon" href="/static/android-chrome-192x192.png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+
+<body class="body">
+
+    <div class="grandparaentContainer">
+
+        <div class="parentContainer">
+            <div class="trapdoor">
+                <div class="top door">
+                </div>
+                <div class="bottom door">
+                </div>
+                <button class="btn">Continue</button>
+            </div>
+            <div class="container">
+                <div class="glitch" data-text="SCREENER">SCREENER</div>
+                <div class="glow">SCREENER</div>
+                <p class="subtitle">IN GODS' NAME: JAI SHRI KRISHNA</p>
+            </div>
+        </div>
+
+        <div class="box-wrap">
+
+
+            <h1 class="tableCategory topGainer">TOP GAINER: LOW MC <button class="hideButton">HIDE</button>
+                <button class="infobutton"
+                    onclick="alert('The plan with this stock is to short it as soon after its done spiking because these kinds of stock generally just spike for no big reason')">PLAN</button>
+            </h1>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TICKER / EXCHANGE</th>
+                            <th>COMPANY NAME</th>
+                            <th>1D % / MARKET CAP / PRICE</th>
+                            <th>COMPANY NEWS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TOP-GAINER-LOW-MC">
+                    </tbody>
+                </table>
+            </div>
+
+            <h1 class="tableCategory topGainer">TOP GAINER: HIGH MC <button class="hideButton">HIDE</button>
+                <button class="infobutton"
+                    onclick="alert('These stocks are generally more safe however you must read as to why it moved and react based off of investor sentiment. However rememeber: SELL WHEN OTHERS ARE GREEDY AND BUY WHEN OTHERS ARE FEARFUL')">PLAN</button>
+            </h1>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TICKER / EXCHANGE</th>
+                            <th>COMPANY NAME</th>
+                            <th>1D % / MARKET CAP / PRICE</th>
+                            <th>COMPANY NEWS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TOP-GAINER-HIGH-MC">
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h1 class="tableCategory topLoser">TOP LOSER: LOW MC<button class="hideButton">HIDE</button><button
+                    class="infobutton"
+                    onclick="alert('If the drop on these stocks are unreasonable then it will defintiely go up the next day however the hard part is the liquidity so please do watch out on that')">PLAN</button>
+            </h1>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TICKER / EXCHANGE</th>
+                            <th>COMPANY NAME</th>
+                            <th>1D % / MARKET CAP / PRICE</th>
+                            <th>COMPANY NEWS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TOP-LOSER-LOW-MC">
+                    </tbody>
+                </table>
+            </div>
+
+            <h1 class="tableCategory topLoser">TOP LOSER: HIGH MC<button class="hideButton">HIDE</button><button
+                    class="infobutton"
+                    onclick="alert('View the news and move according and since the mc is high, it is generally safe and more readable')">PLAN</button>
+            </h1>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TICKER / EXCHANGE</th>
+                            <th>COMPANY NAME</th>
+                            <th>1D % / MARKET CAP / PRICE</th>
+                            <th>COMPANY NEWS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TOP-LOSER-HIGH-MC">
+                    </tbody>
+                </table>
+            </div>
+
+            <h1 class="tableCategory topLoser" style="color: aqua;">SELECTED STOCK TRACKERS<button
+                    class="hideButton">HIDE</button></h1>
+            <div class="table-wrap lastTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TICKER / EXCHANGE</th>
+                            <th>COMPANY NAME</th>
+                            <th>1D % / MARKET CAP / PRICE</th>
+                            <th>COMPANY NEWS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="prefered_stock_space">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="scanlines"></div>
+
+    <div class="backBtn">
+        <span class="line tLine"></span>
+        <span class="line mLine"></span>
+        <span class="label">Back</span>
+        <span class="line bLine"></span>
+    </div>
+
+    </div>
+
+</body>
+
+<script>
+    var data = '{{ stock_data|tojson }}';
+    var prefered_data = '{{ prefered_stock_data|tojson }}';
+
+</script>
+
+<script src="/static/index.js">
+</script>
+
+</html>
